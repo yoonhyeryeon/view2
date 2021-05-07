@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'Noto Sans KR', sans-serif;
+    src: url(../font/NotoSansKR-Regular.otf);
+}
+
+
+/*  css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+
+input,
+select,
+button {
+    vertical-align: middle;
+    outline: none;
+}
+
+p,
+li,
+dd {
+    line-height: 1.5em
+}
+
+.hidden,
+#skipNav {
+    display: block;
+    position: absolute;
+    position: absolute;
+    left: -1000%;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+#skipNav {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    overflow: hidden;
+}
+
+#skipNav a {
+    display: block;
+    height: 1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+}
+
+#skipNav a:hover,
+#skipNav a:focus,
+#skipNav a:active {
+    height: auto;
+    padding: 10px 0;
+    background: #f2f2f2;
+}
+
+
+
+/* 헤더 */
+
+header {
+    position: fixed;
+    height: 100%;
+    width: 30%;
+}
+
+header nav {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+header nav ul {
+    padding-top: 50px;
+}
+
+header nav ul li a{
+    display: block;
+    padding: 10px;
+    font-size: 1.125em;
+}
+
+header nav .first-head {
+    background-color: #4c4b4b;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+header nav .first-head a {
+    color:#fff
+}
+
+header nav .second-head { 
+    background-color: #e6d5b8;
+    color: #444;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+header nav .first-head li a.on:hover {
+    background-color:#e6d5b8;
+    color:#555
+}
+
+header nav .second-head li a:hover {
+    background-color:#4c4b4b;
+    color:#fff
+}
+
+/* 로그인 */
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    /* background-color: rgba(244, 242, 234, .6); */
+    border-radius: 10px;
+}
+
+.login-box .input-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box .input-box input {
+    width: 80%;
+    height: 40px;
+    border: none;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+.login-box .input-box input::placeholder {
+    color: rgba(255, 255, 255, .5);
+}
+
+.login-box .input-box button {
+    width: 50%;
+    border: none;
+    background-color: #eeba60;
+    color: #fff;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.login-box .input-box button:hover {
+    background-color: #f2c16d
+}
+
+
+/* 상품등록영역 */
+
+#set-wrap {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f2ea;
+    height: 100vh;
+}
+
+#set-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-top: 100px;
+}
+
+#set-content h1 {
+    color: #777;
+    font-size: 1.563em;
+    padding-bottom: 5px;
+}
+
+#set-content p {
+    font-size: 0.75em;
+    padding-bottom: 30px;
+}
+
+#set-content h2 {
+    width: 70%;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #e6d5b8;
+    font-weight: normal;
+    font-size: 1.125em;
+}
+
+.set-content-box {
+    margin-top: 30px;
+}
+
+.set-content-form1 {
+    display: flex;
+    justify-content: center;
+}
+
+.set-content-form1 select {
+    padding: 3px;
+    width: 100px;
+}
+
+.set-content-form1 li:first-child select {
+    margin-right: 50px;
+}
+
+.set-content-form1 label {
+    padding-right: 10px
+}
+
+.set-content-form2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.set-content-form2 li {
+    margin-bottom: 10px;
+}
+
+.set-content-form2 li input {
+    padding: 3px;
+    width: 330px;
+    height: 30px;
+    border: none;
+
+}
+
+.set-content-form3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.set-content-form3 li:not(:last-child) {
+    padding-right: 10px;
+}
+
+.set-content-form3 li button {
+    background-color: #eeba60;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.set-content-form3 li button:hover {
+    background-color: #f2c16d;
+}
+
+
+
+/* 본문 */
+
+
+#wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: #f4f2ea;
+}
+
+#content {
+    /* height: 100%; */
+    width: 100%;
+}
+
+.content-wrap {
+    background-color: #4c4b4b;
+    position: absolute;
+    top: 170px;
+    right: 0;
+    height: 65%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top-left-radius: 100px;
+}
+
+.content-text {
+    margin-right: 50px;
+}
+
+.content-text span {
+    color: rgba(245, 244, 232, .7);
+    font-size: 0.75em;
+}
+
+.content-text h4 {
+    color: #f5f4e8;
+    font-size: 2.5em;
+    position: relative;
+}
+
+.content-text h4::after {
+    content: '';
+    display: block;
+    width: 110%;
+    height: 3px;
+    background-color: #f5f4e8;
+    position: absolute;
+}
+
+.content-text ul {
+    margin-top: 20px;
+    color: #f5f4e8;
+}
+
+.content-text ul li {
+    padding: 5px;
+    border-bottom: .5px dashed rgba(255, 255, 255, .2);
+}
+
+.content-text ul li .text-content {
+    color: rgba(245, 244, 232, .8);
+}
+
+.text-box {
+    display:flex
+}
+
+
+
+/* 미디어 쿼리 */
+
+@media screen and (max-width:1053px) {
+    #wrap {
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .content-wrap {
+        display: block;
+    }
+
+    .content-wrap .content-img {
+        text-align: center;
+        position: relative;
+        top: -50px;
+    }
+
+    .content-wrap {
+        height: auto;
+        width: 55%;
+        top: 80px;
+    }
+
+    .content-text {
+        margin: 0 30px 30px;
+    }
+
+    header nav ul li {
+        font-size: 1em;
+    }
+}
